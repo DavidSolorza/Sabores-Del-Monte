@@ -107,7 +107,7 @@ function App() {
       name: "Dip de Pimentón",
       icon: <Leaf className="w-8 h-8" />,
       color: "from-red-200 to-orange-200",
-      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.02_f1003ef3.jpg"
+      image: "images/Imagen de WhatsApp 2025-07-11 a las 09.37.02_f1003ef3.jpg"
     }
   ];
 
