@@ -69,35 +69,35 @@ function App() {
       name: "Mora, fresa y kiwi", 
       icon: <Grape className="w-8 h-8" />, 
       color: "from-purple-200 to-pink-200",
-      image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.23_28589925.jpg"
     },
     { 
       id: 'corozo', 
       name: "Corozo", 
       icon: <Cherry className="w-8 h-8" />, 
       color: "from-orange-200 to-red-200",
-      image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.48_c61e50d1.jpg"
     },
     { 
       id: 'naranja-gulupa-uchuva', 
       name: "Naranja, gulupa y uchuva", 
       icon: <Apple className="w-8 h-8" />, 
       color: "from-yellow-200 to-orange-200",
-      image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.13_2c8e0e87.jpg"
     },
     { 
       id: 'pina-maracuya-kiwi', 
       name: "Piña, maracuyá y kiwi", 
       icon: <Leaf className="w-8 h-8" />, 
       color: "from-green-200 to-yellow-200",
-      image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.36_18b6a8e4.jpg"
     },
     { 
       id: 'mora-agraz', 
       name: "Mora y agraz", 
       icon: <Grape className="w-8 h-8" />, 
       color: "from-indigo-200 to-purple-200",
-      image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.55_5c2da2a5.jpg"
     }
   ];
 
@@ -107,7 +107,7 @@ function App() {
       name: "Dip de Pimentón",
       icon: <Leaf className="w-8 h-8" />,
       color: "from-red-200 to-orange-200",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.02_f1003ef3.jpg"
     }
   ];
 
@@ -259,7 +259,7 @@ function App() {
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">Del Monte</h1>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">Sabores Del Monte</h1>
                 <p className="text-xs text-gray-500">Mermeladas Artesanales</p>
               </div>
             </div>
@@ -294,9 +294,9 @@ function App() {
           <div className="mb-12 animate-on-scroll">
             <div className="relative inline-block">
               <img 
-                src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                src="../public/images/Imagen de WhatsApp 2025-07-11 a las 09.38.49_1895d2f6.jpg" 
                 alt="Frascos de mermelada artesanal" 
-                className="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-4 py-2 rounded-full shadow-lg animate-bounce">
                 <Sparkles className="w-5 h-5 inline mr-1" />
@@ -338,7 +338,7 @@ function App() {
                     <img 
                       src={mermelada.image} 
                       alt={mermelada.name}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full min-h-[300px] object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${mermelada.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
@@ -407,7 +407,7 @@ function App() {
                     <img 
                       src={aderezo.image} 
                       alt={aderezo.name}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full min-h-[300px] object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${aderezo.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
