@@ -260,7 +260,7 @@ function App() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">Sabores Del Monte</h1>
-                <p className="text-xs text-gray-500">Mermeladas Artesanales</p>
+                <p className="text-base text-gray-700 font-medium">Mermeladas Artesanales</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -308,7 +308,7 @@ function App() {
             Mermeladas y Aderezos
           </h2>
           <p className="text-2xl md:text-3xl text-gray-700 mb-8 font-medium animate-on-scroll">
-            Sabores naturales, hechos con amor en Medellín
+            Sabores naturales sin aditivos, hechos con amor en Medellín
           </p>
           <div className="flex justify-center space-x-6 animate-on-scroll">
             <div className="bg-green-100 p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300">
@@ -563,7 +563,7 @@ function App() {
             <div className="bg-gradient-to-r from-orange-400 to-pink-400 p-3 rounded-full shadow-lg">
               <Heart className="w-6 h-6 text-white" />
             </div>
-            <h5 className="text-2xl font-bold">Del Monte</h5>
+            <h5 className="text-2xl font-bold">Sabores Del Monte</h5>
           </div>
           <p className="text-gray-300 mb-6 text-lg">
             Mermeladas y Aderezos artesanales hechos con amor en Medellín
