@@ -69,35 +69,35 @@ function App() {
       name: "Mora, fresa y kiwi", 
       icon: <Grape className="w-8 h-8" />, 
       color: "from-purple-200 to-pink-200",
-      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.23_28589925.jpg"
+      image: "/images/Imagen de WhatsApp 2025-07-11 a las 09.37.23_28589925.jpg"
     },
     { 
       id: 'corozo', 
       name: "Corozo", 
       icon: <Cherry className="w-8 h-8" />, 
       color: "from-orange-200 to-red-200",
-      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.48_c61e50d1.jpg"
+      image: "/images/Imagen de WhatsApp 2025-07-11 a las 09.37.48_c61e50d1.jpg"
     },
     { 
       id: 'naranja-gulupa-uchuva', 
       name: "Naranja, gulupa y uchuva", 
       icon: <Apple className="w-8 h-8" />, 
       color: "from-yellow-200 to-orange-200",
-      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.13_2c8e0e87.jpg"
+      image: "/images/Imagen de WhatsApp 2025-07-11 a las 09.37.13_2c8e0e87.jpg"
     },
     { 
       id: 'pina-maracuya-kiwi', 
       name: "Piña, maracuyá y kiwi", 
       icon: <Leaf className="w-8 h-8" />, 
       color: "from-green-200 to-yellow-200",
-      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.36_18b6a8e4.jpg"
+      image: "/images/Imagen de WhatsApp 2025-07-11 a las 09.37.36_18b6a8e4.jpg"
     },
     { 
       id: 'mora-agraz', 
       name: "Mora y agraz", 
       icon: <Grape className="w-8 h-8" />, 
       color: "from-indigo-200 to-purple-200",
-      image: "../public/images/Imagen de WhatsApp 2025-07-11 a las 09.37.55_5c2da2a5.jpg"
+      image: "/images/Imagen de WhatsApp 2025-07-11 a las 09.37.55_5c2da2a5.jpg"
     }
   ];
 
@@ -294,7 +294,7 @@ function App() {
           <div className="mb-12 animate-on-scroll">
             <div className="relative inline-block">
               <img 
-                src="../public/images/Imagen de WhatsApp 2025-07-11 a las 09.38.49_1895d2f6.jpg" 
+                src="images/Imagen de WhatsApp 2025-07-11 a las 09.38.49_1895d2f6.jpg" 
                 alt="Frascos de mermelada artesanal" 
                 className="w-full max-w-md mx-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
