@@ -259,8 +259,13 @@ function App() {
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">Sabores Del Monte</h1>
-                <p className="text-base text-gray-700 font-medium">Mermeladas Artesanales</p>
+                <h1 className="text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
+  Sabores Del Monte
+</h1>
+<p className="text-lg text-gray-800 font-semibold">
+  Mermeladas Artesanales
+</p>
+
               </div>
             </div>
             <div className="flex items-center space-x-4">
