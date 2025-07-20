@@ -282,7 +282,7 @@ function App() {
     });
 
     const message = generateWhatsAppMessage();
-    window.open(`https://wa.me/573105960000?text=${message}`, "_blank");
+    window.open(`https://wa.me/573117897305?text=${message}`, "_blank");
     setShowCustomerForm(false);
     setCart([]);
     setCustomerInfo({ name: "", address: "", city: "" });
