@@ -19,7 +19,9 @@ import {
   Minus,
   X,
   Sparkles,
+  Eye,
 } from "lucide-react";
+import { getVisitCount, incrementVisitCount } from './lib/supabase';
 
 interface CartItem {
   id: string;
@@ -56,6 +58,8 @@ function App() {
     const saved = localStorage.getItem("delMonteSales");
     return saved ? JSON.parse(saved) : {};
   });
+  const [visitCount, setVisitCount] = useState<number>(0);
+  const [isLoadingVisits, setIsLoadingVisits] = useState(true);
 
   // Función para obtener etiquetas basadas en ventas
   const getProductBadges = (productId: string) => {
@@ -293,6 +297,33 @@ function App() {
   };
 
   useEffect(() => {
+    // Función para manejar el contador de visitas
+    const handleVisitCounter = async () => {
+      try {
+        // Verificar si ya se registró una visita en esta sesión
+        const hasVisited = sessionStorage.getItem('hasVisited');
+        
+        if (!hasVisited) {
+          // Incrementar contador solo si es la primera visita de la sesión
+          const newCount = await incrementVisitCount();
+          setVisitCount(newCount);
+          sessionStorage.setItem('hasVisited', 'true');
+        } else {
+          // Solo obtener el contador actual
+          const currentCount = await getVisitCount();
+          setVisitCount(currentCount);
+        }
+      } catch (error) {
+        console.error('Error handling visit counter:', error);
+        // En caso de error, solo mostrar 0
+        setVisitCount(0);
+      } finally {
+        setIsLoadingVisits(false);
+      }
+    };
+
+    handleVisitCounter();
+
     // Trigger initial animations immediately
     const timer = setTimeout(() => {
       const elements = document.querySelectorAll(".animate-on-scroll");
@@ -348,6 +379,17 @@ function App() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
+              {/* Contador de visitas */}
+              <div className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-3 py-2 rounded-full">
+                <Eye className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-semibold text-gray-700">
+                  {isLoadingVisits ? (
+                    <span className="animate-pulse">...</span>
+                  ) : (
+                    `${visitCount.toLocaleString()} visitas`
+                  )}
+                </span>
+              </div>
               <button
                 onClick={() => setIsCartOpen(true)}
                 className="relative bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white p-3 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300"
