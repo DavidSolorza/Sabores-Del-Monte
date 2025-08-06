@@ -42,12 +42,21 @@ interface SalesData {
   [key: string]: number;
 }
 
+interface CartNotification {
+  show: boolean;
+  productName: string;
+  size: string;
+}
+
 function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [showAddedAnimation, setShowAddedAnimation] = useState<string | null>(
-    null
-  );
+  const [showAddedAnimation, setShowAddedAnimation] = useState<string | null>(null);
+  const [cartNotification, setCartNotification] = useState<CartNotification>({
+    show: false,
+    productName: '',
+    size: ''
+  });
   const [showCustomerForm, setShowCustomerForm] = useState(false);
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo>({
     name: "",
@@ -209,7 +218,19 @@ function App() {
     }
 
     setShowAddedAnimation(itemId);
-    setTimeout(() => setShowAddedAnimation(null), 1000);
+    
+    // Mostrar notificación
+    setCartNotification({
+      show: true,
+      productName: product.name,
+      size: size
+    });
+    
+    // Ocultar animación y notificación
+    setTimeout(() => {
+      setShowAddedAnimation(null);
+      setCartNotification({ show: false, productName: '', size: '' });
+    }, 3000);
   };
 
   const updateQuantity = (itemId: string, newQuantity: number) => {
@@ -999,7 +1020,52 @@ function App() {
         </div>
       )}
 
+      {/* Cart Notification */}
+      {cartNotification.show && (
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 cart-notification">
+          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-2xl shadow-2xl border-2 border-green-300">
+            <div className="flex items-center space-x-3">
+              <div className="bg-white/20 rounded-full p-2">
+                <CheckCircle className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="font-bold text-lg">¡Agregado al carrito!</p>
+                <p className="text-green-100 text-sm">
+                  {cartNotification.productName} ({cartNotification.size})
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <style>{`
+        .cart-notification {
+          animation: slideInFromTop 0.5s ease-out forwards, slideOutToTop 0.5s ease-in 2.5s forwards;
+        }
+        
+        @keyframes slideInFromTop {
+          from {
+            transform: translateY(-100px);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        @keyframes slideOutToTop {
+          from {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateY(-100px);
+            opacity: 0;
+          }
+        }
+        
         .animate-fade-in-up {
           animation: fadeInUp 0.4s ease-out forwards;
         }
